@@ -1,0 +1,9 @@
+.shorten-detail {
+	display: none;
+}
+.shorten_expand .shorten-ellipses {
+	display: none;
+}
+.shorten_expand .shorten-detail {
+	display: inline;
+}

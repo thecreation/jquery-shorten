@@ -1,0 +1,26 @@
+{
+  "name": "jquery.shorten",
+  "title": "jQuery shorten",
+  "description": "A jquery plugin that automatically add more link to the text if its lenght is greater then the limit.",
+  "version": "0.2.0",
+  "homepage": "https://github.com/amazingsurge/jquery-shorten",
+  "author": {
+    "name": "amazingsurge",
+    "email": "amazingsurge@yahoo.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/amazingsurge/jquery-shorten.git"
+  },
+  "bugs": "https://github.com/amazingsurge/jquery-shorten/issues",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/amazingsurge/jquery-shorten/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": "*"
+  },
+  "keywords": []
+}
