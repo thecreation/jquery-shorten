@@ -5,8 +5,8 @@ A jquery plugin that automatically add more link to the text if its lenght is gr
 ## Getting Started
 Download the [production version][min] or the [development version][max].
 
-[min]: https://raw.github.com/root/jquery-shorten/master/dist/shorten.min.js
-[max]: https://raw.github.com/root/jquery-shorten/master/dist/shorten.js
+[min]: https://raw.github.com/root/jquery-shorten/master/dist/jquery-shorten.min.js
+[max]: https://raw.github.com/root/jquery-shorten/master/dist/jquery-shorten.js
 
 In your web page:
 
@@ -14,7 +14,7 @@ In your web page:
 <link rel="stylesheet" href="css/shorten.css">
 
 <script src="jquery.js"></script>
-<script src="dist/jquery.shorten.min.js"></script>
+<script src="dist/jquery-shorten.min.js"></script>
 
 <script>
 jQuery(function($) {
