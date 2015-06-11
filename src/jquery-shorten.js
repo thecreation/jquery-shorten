@@ -1,8 +1,8 @@
 /*
  * shorten
- * https://github.com/amazingsurge/jquery-shorten
+ * https://github.com/amazingSurge/jquery-shorten
  *
- * Copyright (c) 2014 amazingsurge
+ * Copyright (c) 2014 amazingSurge
  * Licensed under the GPL license.
  */
 (function(window, document, $, undefined) {
