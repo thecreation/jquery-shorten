@@ -1,0 +1,8 @@
+/**
+* jQuery shorten v0.3.0
+* https://github.com/amazingSurge/jquery-shorten
+*
+* Copyright (c) amazingSurge
+* Released under the LGPL-3.0 license
+*/
+.shorten-detail,.shorten_expand .shorten-ellipses{display:none}.shorten_expand .shorten-detail{display:inline}

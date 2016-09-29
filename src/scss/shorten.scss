@@ -1,0 +1,11 @@
+.shorten-detail {
+  display: none;
+}
+.shorten_expand {
+  .shorten-ellipses {
+    display: none;
+  }
+  .shorten-detail {
+    display: inline;
+  }
+}
