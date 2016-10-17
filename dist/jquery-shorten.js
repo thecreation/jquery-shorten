@@ -1,5 +1,5 @@
 /**
-* jQuery shorten v0.3.0
+* jQuery shorten v0.3.1
 * https://github.com/amazingSurge/jquery-shorten
 *
 * Copyright (c) amazingSurge
@@ -147,13 +147,11 @@
       }, {
         key: '_trigger',
         value: function _trigger(eventType) {
-          var _ref;
-
           for (var _len = arguments.length, params = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
             params[_key - 1] = arguments[_key];
           }
 
-          var data = (_ref = [this]).concat.apply(_ref, params);
+          var data = [this].concat(params);
 
           // event
           this.$element.trigger(NAMESPACE$1 + '::' + eventType, data);
@@ -168,9 +166,7 @@
           var onFunction = 'on' + eventType;
 
           if (typeof this.options[onFunction] === 'function') {
-            var _options$onFunction;
-
-            (_options$onFunction = this.options[onFunction]).apply.apply(_options$onFunction, [this].concat(params));
+            this.options[onFunction].apply(this, params);
           }
         }
       }, {
@@ -270,7 +266,7 @@
             this.$element.html(text);
           }
 
-          this._trigger('expand', [text]);
+          this._trigger('expand', text);
         }
       }], [{
         key: 'setDefaults',
@@ -283,13 +279,13 @@
     }();
 
     var info = {
-      version: '0.3.0'
+      version: '0.3.1'
     };
 
     var NAMESPACE = 'shorten';
-    var OtherAsScrollbar = _jquery2.default.fn.shorten;
+    var OtherAsShorten = _jquery2.default.fn.shorten;
 
-    var jQueryshorten = function jQueryshorten(options) {
+    var jQueryShorten = function jQueryShorten(options) {
       var _this2 = this;
 
       for (var _len2 = arguments.length, args = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
@@ -346,14 +342,14 @@
       );
     };
 
-    _jquery2.default.fn.shorten = jQueryshorten;
+    _jquery2.default.fn.shorten = jQueryShorten;
 
     _jquery2.default.shorten = _jquery2.default.extend({
       setDefaults: shorten.setDefaults,
       noConflict: function noConflict() {
-        _jquery2.default.fn.shorten = OtherAsScrollbar;
+        _jquery2.default.fn.shorten = OtherAsShorten;
 
-        return jQueryshorten;
+        return jQueryShorten;
       }
     }, info);
   }

@@ -3,9 +3,9 @@ import shorten from './shorten';
 import info from './info';
 
 const NAMESPACE = 'shorten';
-const OtherAsScrollbar = $.fn.shorten;
+const OtherAsShorten = $.fn.shorten;
 
-const jQueryshorten = function(options, ...args) {
+const jQueryShorten = function(options, ...args) {
   if (typeof options === 'string') {
     const method = options;
 
@@ -33,12 +33,12 @@ const jQueryshorten = function(options, ...args) {
   });
 };
 
-$.fn.shorten = jQueryshorten;
+$.fn.shorten = jQueryShorten;
 
 $.shorten = $.extend({
   setDefaults: shorten.setDefaults,
   noConflict: function() {
-    $.fn.shorten = OtherAsScrollbar;
-    return jQueryshorten;
+    $.fn.shorten = OtherAsShorten;
+    return jQueryShorten;
   }
 }, info);

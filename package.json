@@ -2,7 +2,7 @@
   "name": "jquery-shorten",
   "title": "jQuery shorten",
   "description": "A jquery plugin that automatically add more link to the text if its lenght is greater then the limit",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "homepage": "https://github.com/amazingSurge/jquery-shorten",
   "author": {
     "name": "amazingSurge",

@@ -1,5 +1,5 @@
 /**
-* jQuery shorten v0.3.0
+* jQuery shorten v0.3.1
 * https://github.com/amazingSurge/jquery-shorten
 *
 * Copyright (c) amazingSurge
@@ -66,7 +66,7 @@ class shorten {
   }
 
   _trigger(eventType, ...params) {
-    let data = [this].concat(...params);
+    let data = [this].concat(params);
 
     // event
     this.$element.trigger(`${NAMESPACE$1}::${eventType}`, data);
@@ -78,7 +78,7 @@ class shorten {
     let onFunction = `on${eventType}`;
 
     if (typeof this.options[onFunction] === 'function') {
-      this.options[onFunction].apply(this, ...params);
+      this.options[onFunction].apply(this, params);
     }
   }
 
@@ -161,7 +161,7 @@ class shorten {
       this.$element.html(text);
     }
 
-    this._trigger('expand', [text]);
+    this._trigger('expand', text);
   }
 
   static setDefaults(options) {
@@ -170,13 +170,13 @@ class shorten {
 }
 
 var info = {
-  version:'0.3.0'
+  version:'0.3.1'
 };
 
 const NAMESPACE = 'shorten';
-const OtherAsScrollbar = $.fn.shorten;
+const OtherAsShorten = $.fn.shorten;
 
-const jQueryshorten = function(options, ...args) {
+const jQueryShorten = function(options, ...args) {
   if (typeof options === 'string') {
     const method = options;
 
@@ -204,12 +204,12 @@ const jQueryshorten = function(options, ...args) {
   });
 };
 
-$.fn.shorten = jQueryshorten;
+$.fn.shorten = jQueryShorten;
 
 $.shorten = $.extend({
   setDefaults: shorten.setDefaults,
   noConflict: function() {
-    $.fn.shorten = OtherAsScrollbar;
-    return jQueryshorten;
+    $.fn.shorten = OtherAsShorten;
+    return jQueryShorten;
   }
 }, info);

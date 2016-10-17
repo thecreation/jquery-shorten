@@ -46,6 +46,11 @@ bower install jquery-shorten-js --save
 npm install jquery-shorten --save
 ```
 
+#### Install From Yarn
+```sh
+yarn add jquery-shorten
+```
+
 #### Build From Source
 If you want build from source:
 
@@ -111,11 +116,11 @@ You can also save the instances to variable for further use.
 
 ```javascript
 // call directly
-$().shorten('destory');
+$().shorten('destroy');
 
 // or
 var api = $().data('shorten');
-api.destory();
+api.destroy();
 ```
 
 #### text()

@@ -52,7 +52,7 @@ class shorten {
   }
 
   _trigger(eventType, ...params) {
-    let data = [this].concat(...params);
+    let data = [this].concat(params);
 
     // event
     this.$element.trigger(`${NAMESPACE}::${eventType}`, data);
@@ -64,7 +64,7 @@ class shorten {
     let onFunction = `on${eventType}`;
 
     if (typeof this.options[onFunction] === 'function') {
-      this.options[onFunction].apply(this, ...params);
+      this.options[onFunction].apply(this, params);
     }
   }
 
@@ -147,7 +147,7 @@ class shorten {
       this.$element.html(text);
     }
 
-    this._trigger('expand', [text]);
+    this._trigger('expand', text);
   }
 
   static setDefaults(options) {
